@@ -7,7 +7,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "bash -c 'cat /etc/os-release; uname -a; id; ip a; ifconfig;'"
+      shell: "bash -c 'curl -k https://1.1.1.1'"
       register: "output"
 
     - debug: var=output.stdout_lines
