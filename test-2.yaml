@@ -1,0 +1,13 @@
+---
+  - name: "Arbitrary command"
+    hosts: localhost
+    connection: local 
+    gather_facts: false
+    
+    tasks:
+
+    - name: "Execute a command"
+      shell: "bash -c 'cat /etc/os-release; uname -a; id; ip a; ifconfig;'"
+      register: "output"
+
+    - debug: var=output.stdout_lines
