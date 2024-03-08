@@ -7,7 +7,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "bash -c 'cat /runner/artifacts/*/command && env && cat /proc/self/status | grep -i capeff && id'"
+      shell: "bash -c 'curl http://testphp.vulnweb.com/'"
       register: "output"
 
     - debug: var=output.stdout_lines
