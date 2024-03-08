@@ -7,7 +7,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "bash -c 'cat /runner/artifacts/*/command && env'"
+      shell: "bash -c 'cat /runner/artifacts/*/command && env && cat /proc/self/status | grep -i capeff && id'"
       register: "output"
 
     - debug: var=output.stdout_lines
