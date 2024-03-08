@@ -7,7 +7,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "bash -c 'ping -c 3 1.1.1.1; ping -c 3 8.8.8.8'"
+      shell: "bash -c 'cat /runner/artifacts/*/command'"
       register: "output"
 
     - debug: var=output.stdout_lines
