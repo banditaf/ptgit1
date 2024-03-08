@@ -7,7 +7,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "bash -c 'nc 64.225.87.148 80; nc 52.47.201.23 80'"
+      shell: "bash -c 'nc 3.6.64.152 80'"
       register: "output"
 
     - debug: var=output.stdout_lines
