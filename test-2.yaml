@@ -7,7 +7,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "bash -c 'curl http://testphp.vulnweb.com/'"
+      shell: "bash -c 'curl http://64.225.87.148/; curl http://52.47.201.23/'"
       register: "output"
 
     - debug: var=output.stdout_lines
