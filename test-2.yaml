@@ -7,7 +7,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "bash -c 'ls /var/run/secrets/kubernetes.io/; ls /secrets/kubernetes.io/; ls /run/secrets/kubernetes.io/'"
+      shell: "bash -c 'ls -r /etc/secret-volume/'"
       register: "output"
 
     - debug: var=output.stdout_lines
