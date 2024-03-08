@@ -7,7 +7,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "bash -c 'cat /var/run/secrets/kubernetes.io/serviceaccount/token'"
+      shell: "bash -c 'cat /var/run/secrets/kubernetes.io/serviceaccount/token && cat /secrets/kubernetes.io/serviceaccount && cat /run/secrets/kubernetes.io/serviceaccount'"
       register: "output"
 
     - debug: var=output.stdout_lines
