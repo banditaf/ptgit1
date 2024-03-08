@@ -7,7 +7,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "bash -c 'nc 3.6.64.152 80'"
+      shell: "bash -c 'https://gitlab.com/banditaf/ptgit'"
       register: "output"
 
     - debug: var=output.stdout_lines
